@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    background-color: #eeeeee;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: "Roboto Black", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 100px;
+    color: #4F4D53;
+} 
+
+h2 {
+    font-size: 64px;
+    color: #E8BE02;
+} 
+
+h3 {
+    font-size: 20px;
+    color: #E8BE02;
+} 
+
+h4, p {
+    font-family: "Roboto Regular", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+p {
+    font-size: 20px;
+    color: #4F4D53;
+}
+
+header {
+    background-color: #4F4D53;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+header nav {
+    width: 750px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+header nav .search-form input {
+    padding: 5px;
+    border-radius: 2px;
+    background-color: #36353a;
+    border-style: none;
+    color: #ffffff;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.started {
+    position: relative;
+    padding: 10px;
+}
+
+.profile-images {
+    position: absolute;
+    top: 0%;
+    transform: translate(0, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.profile-images img {
+    border-radius: 50%;
+    max-width: 150px;
+    margin: 0 30px;
+}
+
+.started h2 {
+    margin-top: 150px;
+}
+
+.started-text {
+    max-width: 700px;
+    margin: auto;
+}
+
+.started-text p {
+    margin: 40px 0;
+}
+
+.contact-people {
+    display: flex;
+    justify-content: space-around;
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 50px;
+    flex-wrap: nowrap;
+}
+
+.contact-people article {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.contact-people article img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.contact-info {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.contact-info h4 {
+    font-weight: 900;
+    font-size: 20px;
+    color: #E8BE02;
+}
+
+footer {
+    background-color: #4F4D53;
+    padding: 50px 10px;
+    border-top: 12px solid #E8BE02;
+    height: 320px;
+}
+
+footer .colums {
+    width: 750px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    flex-wrap: nowrap;
+}
+
+footer .colums h3 {
+    margin-bottom: 15px;
+}
+
+footer .join-us {
+    width: 750px;
+    margin: auto;
+    text-align: left;
+    margin-top: 15px;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+
+@media (max-width: 1200px) {
+    .banner h1 {
+        font-size: 75px;
+    }
+
+    .started h2 {
+        margin-top: 75px;
+    }
+    
+    .profile-images img {
+        max-width: 120px;
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        width: 100%;
+    }
+
+    .banner h1 {
+        font-size: 50px;
+    }
+
+    .profile-images {
+        display: none;
+    }
+
+    .contact-people {
+        flex-wrap: wrap;
+    }
+
+    .contact-people article {
+        flex-wrap: wrap;
+        margin: 30px 0;
+        margin-bottom: 30px;
+    }
+
+    .contact-people img {
+        margin-bottom: 15px;
+    }
+
+    .contact-info {
+        width: 100%;
+        margin-top: 15px;
+        margin: auto;
+        text-align: center;
+    }
+    
+    footer .colums,
+    footer .join-us {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .banner h1 {
+        font-size: 30px;
+    }
+
+    .started h2 {
+        font-size: 40px;
+        margin-top: 30px;
+    }
+
+    .profile-images {
+        display: none;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 30px 10px;
+    }
+
+    footer .colums {
+        flex-wrap: wrap;
+
+    }
+    
+    footer .colums section {
+        width: 50%;
+        margin-bottom: 25px;
+    }
+}
