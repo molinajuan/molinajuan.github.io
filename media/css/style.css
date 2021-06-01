@@ -2,16 +2,27 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: gainsboro;
+    /* background-color: gainsboro; */
+    background-color: #ffffff;
     font-family: 'Gudea', sans-serif;
 }
 
-/* Estilos generales */
+/* ----- Estilos generales ----- */
 
 h4 {
     color: darkblue;
-    margin: 10px 0;
+    margin: 15px 0;
 }
+
+b {
+    color: darkblue;
+}
+
+p {
+    line-height: 23px;
+}
+
+/* ----- Estilos del header ----- */
 
 header {
     padding: 30px 0 0;
@@ -21,12 +32,12 @@ header {
     max-width: 700px;
     justify-content: center;
     flex-wrap: wrap;
+    padding-bottom: 20px;
     border-bottom: 1px solid darkblue;
 }
 
-header h1,
-header h2 {
-    display: block;
+header h2,
+header h3 {
     padding: 0 5px 10px;
     margin: auto;
     width: 100%;
@@ -58,19 +69,19 @@ header ul li a {
     text-decoration: none;
 }
 
+/* ----- Estilos del main ----- */
+
 main {
     display: flex;
     margin: auto;
     width: 100%;
-    max-width: 700px;
+    max-width: 900px;
     justify-content: center;
     flex-wrap: wrap;
-    border-bottom: 1px solid darkblue;
 }
 
 main section {
     width: 90%;
-    padding: 10px;
 }
 
 main h4 {
@@ -79,27 +90,26 @@ main h4 {
 
 main p {
     margin: auto;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
     display: block;
     font-size: 14px;
-    max-width: 400px;
+    max-width: 350px;
     text-align: justify;
 }
 
 main #work {
-    /* margin-top: 30px; */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    margin: auto;
+    align-items: flex-start;
 }
 
 main #work article {
-    margin: auto;
     margin-bottom: 15px;
     display: block;
     max-width: 400px;
     width: 100%;
+    margin-top: 10px;
 }
 
 main #work article .proyecto {
@@ -111,30 +121,21 @@ main #work article .proyecto {
     position: relative;
     border: 1px solid darkblue;
     margin-bottom: 10px;
-    /* transition: filter 2s ease-out; */
+    margin-top: 10px;
 }
-
-/* main #work article .proyecto:hover {
-    filter: none;
-    cursor: pointer;
-    transition: filter 2s ease-out;
-} */
 .description {
-    /* display: block; */
-    /* padding: 0 5px; */
     width: 100%;
-    background-color: gainsboro;
-    /* color: #000; */
+    /* background-color: gainsboro; */
+    background-color: #ffffff;
     color: darkblue;
     z-index: 1;
     position: absolute;
     bottom: 0;
-    /* border: 1px solid gray; */
 }
-
 .description p {
     text-align: center;
     margin: 0;
+    padding: 5px;
 }
 
 main #work article .proyecto img {
@@ -143,13 +144,15 @@ main #work article .proyecto img {
     filter: grayscale(100%);
 }
 
-
 .color {
     filter: grayscale(100%);
 }
 
+/* ----- Estilos del footer ----- */
+
 footer {
     width: 100%;
+    border-top: 1px solid darkblue;
 }
 
 footer .footer-info {
@@ -160,6 +163,7 @@ footer .footer-info {
     justify-content: space-between;
     max-width: 400px;
     margin: auto;
+    text-align: center;
 }
 
 footer .footer-info h4 {
@@ -176,7 +180,7 @@ footer .footer-info a {
     text-decoration: none;
 }
 
-footer .footer-info b {
+footer .footer-info a:visited {
     color: darkblue;
 }
 
@@ -186,27 +190,118 @@ footer .footer-info p {
     padding: 5px 10px;
 }
 
+/* ----- media queries ----- */
+
 @media (min-width: 760px) {
-    main #work article {
+    body {
+        position: relative;
+        min-height: 100vh;
+    }
+    header {
+        flex-wrap: nowrap;
+        max-width: 1600px;
+        padding: 30px 0;
+    }
+    header hr {
+        display: none;
+    }
+    header nav {
+        display: none;
+    }
+    header h2, header h3 {
+        padding: 0;
+    }
+    main {
+        flex-wrap: nowrap;
+        margin-top: 30px;
+    }
+    main section#about {
+        width: 50%;
+    }
+    main section#work {
+        width: 50%;
         display: flex;
         flex-wrap: wrap;
     }
-
-    main #work article h4 {
+    main #work article {
+        display: flex;
         flex-wrap: wrap;
-        width: 100%;
+        margin-top: 0;
     }
-    
     main #work article .proyecto {
+        align-items: flex-start;
         display: flex;
         flex-wrap: nowrap;
         margin: auto;
         width: 45%;
         filter: gray;
-        /* transition: filter 2s ease-out; */
     }
-
-    /* footer .footer-info {
+    main #work article h4 {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+        max-width: 1600px;
+        margin-top: 15px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    footer .footer-info {
+        max-width: 1600px;
         flex-wrap: nowrap;
-    } */
+        margin: 30px 0;
+        text-align: center;
+    }
+    footer .footer-info h4 {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        max-height: 100vh;
+    }
+    header {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    main {
+        max-width: 1600px;
+        flex-wrap: nowrap;
+    }
+    
+    main section#about {
+        width: 33%;
+    }
+    main section#work {
+        width: 66%;
+    }
+    main #work article {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+    main #work article h4 {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    main #work article .proyecto {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: nowrap;
+        margin: auto;
+        width: 45%;
+        filter: gray;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+        max-width: 1600px;
+        margin-top: 15px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
 }
