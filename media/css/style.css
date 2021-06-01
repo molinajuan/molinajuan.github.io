@@ -12,6 +12,7 @@ body {
 h4 {
     color: darkblue;
     margin: 15px 0;
+    font-size: 16px;
 }
 
 b {
@@ -20,6 +21,7 @@ b {
 
 p {
     line-height: 23px;
+    font-size: 16px;
 }
 
 /* ----- Estilos del header ----- */
@@ -95,7 +97,6 @@ main p {
     margin: auto;
     padding: 0 10px 10px 10px;
     display: block;
-    font-size: 14px;
     max-width: 350px;
     text-align: justify;
 }
