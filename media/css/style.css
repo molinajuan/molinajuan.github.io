@@ -68,6 +68,9 @@ header ul li {
 header ul li a {
     text-decoration: none;
 }
+header ul li a:visited {
+    color: darkblue;
+}
 
 /* ----- Estilos del main ----- */
 
@@ -144,8 +147,11 @@ main #work article .proyecto img {
     filter: grayscale(100%);
 }
 
-.color {
-    filter: grayscale(100%);
+main #work article .proyecto:hover img {
+    overflow: hidden;
+    width: 100%;
+    filter: grayscale(0%);
+    transition: filter 0.5s ease-in-out;
 }
 
 /* ----- Estilos del footer ----- */
