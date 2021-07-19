@@ -103,12 +103,13 @@ main p {
 
 main #work {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: flex-start;
 }
 
 main #work article {
+    margin: auto;
     margin-bottom: 15px;
     display: block;
     max-width: 400px;
@@ -116,16 +117,19 @@ main #work article {
     margin-top: 10px;
 }
 
-main #work article .proyecto {
+main #work article .main-project,
+main #work article .project {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    margin-bottom: 10px;
     width: 100%;
     max-width: 200px;
     position: relative;
     border: 1px solid darkblue;
     margin-bottom: 10px;
     margin-top: 10px;
+    overflow: hidden;
 }
 .description {
     width: 100%;
@@ -142,13 +146,36 @@ main #work article .proyecto {
     padding: 5px;
 }
 
-main #work article .proyecto img {
+main #work article .project img,
+main #work article .main-project img  {
     overflow: hidden;
     width: 100%;
     filter: grayscale(100%);
 }
 
-main #work article .proyecto:hover img {
+main #work article .main-project a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+main #work article .main-project {
+    position: relative;
+    display: block;
+    min-height: 150px;
+    background-color: #323f48;
+}
+
+main #work article .main-project img {
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    max-width: 100px;
+}
+
+main #work article .project:hover img,
+main #work article .mainproject:hover img  {
     overflow: hidden;
     width: 100%;
     filter: grayscale(0%);
@@ -235,13 +262,16 @@ footer .footer-info p {
         flex-wrap: wrap;
         margin-top: 0;
     }
-    main #work article .proyecto {
+    main #work article .project {
         align-items: flex-start;
         display: flex;
         flex-wrap: nowrap;
         margin: auto;
         width: 45%;
         filter: gray;
+    }
+    main #work article .main-project {
+        min-height: 200px;
     }
     main #work article h4 {
         flex-wrap: wrap;
@@ -295,13 +325,18 @@ footer .footer-info p {
         flex-wrap: wrap;
         width: 100%;
     }
-    main #work article .proyecto {
+    main #work article .project {
         align-items: flex-start;
         display: flex;
         flex-wrap: nowrap;
         margin: auto;
         width: 47%;
         filter: gray;
+    }
+    main #work article .main-project{
+        max-width: 400px;
+        width: 97%;
+        max-height: 200px;
     }
     footer {
         position: absolute;
