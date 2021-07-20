@@ -147,16 +147,10 @@ main #work article .project {
 }
 
 main #work article .project img,
-main #work article .main-project img  {
+main #work article .main-project a  {
     overflow: hidden;
     width: 100%;
     filter: grayscale(100%);
-}
-
-main #work article .main-project a {
-    width: 100%;
-    height: 100%;
-    display: block;
 }
 
 main #work article .main-project {
@@ -164,6 +158,12 @@ main #work article .main-project {
     display: block;
     min-height: 150px;
     background-color: #323f48;
+}
+
+main #work article .main-project a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 main #work article .main-project img {
@@ -175,7 +175,7 @@ main #work article .main-project img {
 }
 
 main #work article .project:hover img,
-main #work article .mainproject:hover img  {
+main #work article .main-project:hover a  {
     overflow: hidden;
     width: 100%;
     filter: grayscale(0%);
@@ -270,6 +270,7 @@ footer .footer-info p {
         width: 45%;
         filter: gray;
     }
+    
     main #work article .main-project {
         min-height: 200px;
     }
